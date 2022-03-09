@@ -1,0 +1,28 @@
+
+REFER: https://www.django-rest-framework.org/tutorial/quickstart/
+
+
+Steps:-
+-----
+
+
+1> mkdir backendcode
+2> cd backendcode
+3> python -m venv env
+4> env\Scripts\activate
+5> pip install django
+6> pip install djangorestframework
+7> django-admin startproject backendcode .
+8> cd backendcode
+9> django-admin startapp quickstart
+10> cd ..
+11> python manage.py migrate
+12> We'll also create an initial user named admin with a password of password123. We'll authenticate as that user later in our example.
+python manage.py createsuperuser --email admin@example.com --username admin
+13> *** Code changes ***
+14> python manage.py runserver
+15> Open on browser URL : http://127.0.0.1:8000/users/
+16> In browser add two users
+17> End server by Ctrl+C
+18> To deactivate virtual environment, use command 'deactivate'.
+19> Do code checkin.
