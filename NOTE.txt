@@ -26,3 +26,106 @@ python manage.py createsuperuser --email admin@example.com --username admin
 17> End server by Ctrl+C
 18> To deactivate virtual environment, use command 'deactivate'.
 19> Do code checkin.
+
+
+
+------------------------ SOME ADDITIONAL STUFF FROM SOME OTHER PROJECT ----------------------
+
+Reference: https://medium.com/swlh/build-your-first-rest-api-with-django-rest-framework-e394e39a482c
+
+steps:- 
+------
+1> Start
+Start Menu --> Posershell (non admin)
+
+2> Go to folder
+cd O:\HOMEPATH\repos\drfExample2
+
+3> Create virtaul environment
+python -m venv env
+env\Scripts\activate
+
+4> Set proxy
+$Env:HTTP_PROXY="http://X.Y.Z.W:8080"
+$Env:HTTPS_PROXY="http://X.Y.Z.82:8080"
+
+5> Install python packages
+pip install djangorestframework
+
+
+6> Create start project
+django-admin startproject mysite
+
+7> cd to project folder
+cd mysite/
+ls
+
+8> run server
+python manage.py runserver
+Ctrl+C # stop server
+
+9> Create start app
+python manage.py startapp myapi
+ls
+
+10> Modify code
+C:\Windows\notepad.exe mysite/settings.py
+
+11> Migration
+python manage.py migrate
+
+12> Create super user
+python manage.py createsuperuser # give user as admin@local.com and password as password123
+
+13> Run server again
+python manage.py runserver
+
+14> Check webpage
+On browser open localhost:8000/admin
+Ctrl+C # stop server
+
+15> Create new Models (Hero)
+C:\Windows\notepad.exe myapi/models.py
+
+16> Make migration
+python manage.py makemigrations
+python manage.py migrate
+
+16> Register model (Hero)
+C:\Windows\notepad.exe myapi/admin.py
+
+17> run server
+python manage.py runserver
+On browser open localhost:8000/admin
+Add some Heros
+Ctrl+C # stop server
+
+18> Set up Django REST Framework
+pip install djangorestframework
+C:\Windows\notepad.exe mysite/settings.py
+
+19> Serialize the Hero model
+New-Item myapi/serializers.py -type file # creates new file
+C:\Windows\notepad.exe myapi/serializers.py
+
+20> Views (Heros)
+C:\Windows\notepad.exe myapi/views.py
+
+21> Site URLs
+
+C:\Windows\notepad.exe mysite/urls.py
+C:\Windows\notepad.exe myapi/urls.py
+New-Item myapi/urls.py -type file
+C:\Windows\notepad.exe myapi/urls.py
+
+22> Test it out!
+python manage.py runserver
+On browser open http://127.0.0.1:8000/
+On browser open http://127.0.0.1:8000/heroes/1/
+Add some Heros
+Ctrl+C # stop server
+
+22> deactive virtual envoronment
+deactivate
+
+23> exit # exits powershell
