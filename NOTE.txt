@@ -6,6 +6,7 @@ Steps:-
 -----
 
 
+0> cd O:\HOMEPATH\repos\WILP
 1> mkdir backendcode
 2> cd backendcode
 3> python -m venv env
@@ -36,7 +37,7 @@ Reference: https://medium.com/swlh/build-your-first-rest-api-with-django-rest-fr
 steps:- 
 ------
 1> Start
-Start Menu --> Posershell (non admin)
+Start Menu --> Powershell (non admin)
 
 2> Go to folder
 cd O:\HOMEPATH\repos\drfExample2
