@@ -23,3 +23,12 @@ On browser open http://127.0.0.1:8000/studentdetails/1
 Ctrl+C # stop server
 deactivate
 exit
+
+
+
+
+
+
+NOTE: To do migration again you may have to delete below files:-
+--> .\backendcode\mysite\myapi\migrations
+--> db.sqlite3
