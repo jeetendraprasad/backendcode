@@ -49,3 +49,34 @@ pip install -r requirements.txt
 NOTE: To do migration again you may have to delete below files:-
 --> .\backendcode\mysite\myapi\migrations
 --> db.sqlite3
+
+
+
+
+--------- extra ---------
+
+1> Download python portable from https://github.com/squeaky-pl/portable-pypy#latest-python-36-release as 'pypy3.6-7.2.0-linux_x86_64-portable.tar.bz2'
+2> extract it at a folder '$HOME/ProgramFilesAllLinux/pypy3.6-7.2.0-linux_x86_64-portable'
+
+
+export PATH="$HOME/ProgramFilesAllLinux/pypy3.6-7.2.0-linux_x86_64-portable/bin:/usr/bin"
+
+
+cd $HOME/repos/WILP/backendcode
+
+python3 -m venv env
+
+source ./env/bin/activate
+OR
+. ./env/bin/activate
+
+pip install djangorestframework
+
+cd mysite
+
+pip install --upgrade pip
+
+python manage.py makemigrations
+
+deactivate
+
