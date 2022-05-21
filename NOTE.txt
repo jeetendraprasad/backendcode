@@ -97,3 +97,12 @@ deactivate
 23> exit # exits powershell
 
 24> Code commit
+
+
+
+
+=============
+- DOCKERIZE -
+=============
+25> cd P:\HOMEPATH\repos\WILP\backendcode
+26> docker build -t docker-backendcode .
