@@ -1,13 +1,13 @@
 STEPS TO BUILD (WINDOWS ONLY)
 -----------------------------
 
-cd O:\HOMEPATH\repos\WILP\backendcode
+cd P:\HOMEPATH\repos\WILP\backendcode
 
 python -m venv env
 
 env\Scripts\activate
 
-pip install djangorestframework
+pip install djangorestframework (OR "pip install -r requirements.txt")
 
 cd mysite
 
@@ -33,15 +33,19 @@ Ctrl+C # stop server
 
 deactivate
 
-exit
+exit # exit ccommand prompt
 
 
+
+
+NOTE: To make python requirements.txt you need following command:-
+P:\HOMEPATH\repos\WILP\backendcode> pip freeze > requirements.txt
+Once requirements.txt is created then installation can be done as:-
+pip install -r requirements.txt
 
 
 
 
 NOTE: To do migration again you may have to delete below files:-
-
 --> .\backendcode\mysite\myapi\migrations
-
 --> db.sqlite3
