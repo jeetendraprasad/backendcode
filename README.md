@@ -53,30 +53,34 @@ NOTE: To do migration again you may have to delete below files:-
 
 
 
---------- extra ---------
+--------- FOR UBUNTU 22.04 ---------
 
 1> Download python portable from https://github.com/squeaky-pl/portable-pypy#latest-python-36-release as 'pypy3.6-7.2.0-linux_x86_64-portable.tar.bz2'
 2> extract it at a folder '$HOME/ProgramFilesAllLinux/pypy3.6-7.2.0-linux_x86_64-portable'
 
-
 export PATH="$HOME/ProgramFilesAllLinux/pypy3.6-7.2.0-linux_x86_64-portable/bin:/usr/bin"
-
 
 cd $HOME/repos/WILP/backendcode
 
+pypy3 -m venv env
+OR
 python3 -m venv env
+OR
+python -m venv env
 
 source ./env/bin/activate
 OR
 . ./env/bin/activate
 
 pip install djangorestframework
+OR
+pip3 install djangorestframework
 
 cd mysite
 
-pip install --upgrade pip
+python(3) manage.py makemigrations
+python(3) manage.py migrate
+python(3) manage.py runserver
 
-python manage.py makemigrations
-
+CTRL+C
 deactivate
-
