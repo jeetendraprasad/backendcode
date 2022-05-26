@@ -1,3 +1,6 @@
-msvc-runtime==14.29.30133
-sqlite-bro==0.12.1
-winpython==4.6.20220116
+asgiref==3.5.2
+Django==4.0.4
+djangorestframework==3.13.1
+pytz==2022.1
+sqlparse==0.4.2
+tzdata==2022.1
