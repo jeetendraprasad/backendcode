@@ -84,3 +84,9 @@ python(3) manage.py runserver
 
 CTRL+C
 deactivate
+
+---------------
+DOCKER COMMANDS:-
+1> docker volume create todo-db
+2> docker build --rm --pull -f "P:\HOMEPATH\repos\WILP\backendcode/Dockerfile" --label "com.microsoft.created-by=visual-studio-code" -t "backendcode:latest" "P:\HOMEPATH\repos\WILP\backendcode"
+3> docker run --rm -d -p 8000:8000/tcp -v todo-db:/etc/todos backendcode:latest
