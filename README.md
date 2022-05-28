@@ -1,3 +1,11 @@
+DOCKER HUB URL:-
+----------------
+
+https://hub.docker.com/repository/docker/jeetendraprasad/backendcode
+
+
+
+
 STEPS TO BUILD (WINDOWS ONLY)
 -----------------------------
 
@@ -52,10 +60,11 @@ NOTE: To do migration again you may have to delete below files:-
 
 
 
-
---------- FOR UBUNTU 22.04 ---------
+STEPS TO BUILD (UBUNTU 22.04)
+-----------------------------
 
 1> Download python portable from https://github.com/squeaky-pl/portable-pypy#latest-python-36-release as 'pypy3.6-7.2.0-linux_x86_64-portable.tar.bz2'
+
 2> extract it at a folder '$HOME/ProgramFilesAllLinux/pypy3.6-7.2.0-linux_x86_64-portable'
 
 export PATH="$HOME/ProgramFilesAllLinux/pypy3.6-7.2.0-linux_x86_64-portable/bin:/usr/bin"
@@ -85,8 +94,11 @@ python(3) manage.py runserver
 CTRL+C
 deactivate
 
+
+DOCKER COMMANDS
 ---------------
-DOCKER COMMANDS:-
 1> docker volume create todo-db
+
 2> docker build --rm --pull -f "P:\HOMEPATH\repos\WILP\backendcode/Dockerfile" --label "com.microsoft.created-by=visual-studio-code" -t "backendcode:latest" "P:\HOMEPATH\repos\WILP\backendcode"
+
 3> docker run --rm -d -p 8000:8000/tcp -v todo-db:/etc/todos backendcode:latest
